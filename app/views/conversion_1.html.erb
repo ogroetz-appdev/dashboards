@@ -1,0 +1,20 @@
+<h1>Convert <%= @conversion_a %></h1>
+
+<div>
+  <span>
+    <%# Go <a href="javascript:history.back()">back.</a> %>
+    Go <a href="/forex">back.</a>
+  </span>
+</div>
+<div>
+  <ul>
+    <% @array_of_conversions.each do |conversion| %>
+    <li>
+      <% url = "/forex/#{@conversion_a}/#{conversion}" %>
+      <a href="<%= url %>">
+      <%= "Convert 1 " + @conversion_a + " to " + conversion + "..."%>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+</div>

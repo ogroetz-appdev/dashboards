@@ -1,0 +1,12 @@
+<h1>Convert <%= @conversion_a %> to <%= @conversion_b %></h1>
+<div>
+<span>1 <%= @conversion_a %> equals <%= @rate %> <%= @conversion_b %></span>
+</div>
+<br />
+<div>
+  <span>
+    <%# Go <a href="javascript:history.back()">back.</a> %>
+    <% url = "/forex/#{@conversion_a}" %>
+    Go <a href="<%= url %>">back.</a>
+  </span>
+</div>

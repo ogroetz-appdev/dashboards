@@ -1,0 +1,19 @@
+<h1>Currency pairs</h1>
+
+<div>
+  <span>
+    Go <a href="javascript:history.back()">back.</a>
+  </span>
+</div>
+<div>
+  <ul>
+    <% @array_of_conversions.each do |conversion| %>
+    <li>
+      <% url = "/forex/#{conversion}" %>
+      <a href="<%= url %>">
+      <%= "Convert 1 " + conversion + " to..." %>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+</div>
